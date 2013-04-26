@@ -11,11 +11,6 @@ class Chef
 
       def load_current_resource
         @current_resource = Chef::Resource::Instance.new(new_resource.name)
-        @current_resource.group(new_resource.group)
-        @current_resource.options(new_resource.options)
-        @current_resource.owner(new_resource.owner)
-        @current_resource.path(new_resource.path)
-        @current_resource.template(new_resource.terminate)
 
         @current_resource.created(created?)
 
