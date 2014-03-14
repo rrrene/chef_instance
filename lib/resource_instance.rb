@@ -5,7 +5,7 @@ class Chef
   class Resource
     class Instance < Chef::Resource
 
-      def initialize(name, run_context=nil)
+      def initialize(new_resource, run_context = nil)
         super
         @provider = Chef::Provider::Instance
         @action = :create
