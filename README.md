@@ -2,13 +2,48 @@
 
 ## Why
 
-Because every cookbook is trying to do the same thing anyway.
+What is our goal when we install a piece of daemonized software? Why does the
+minutia of configuration concern us so greatly? Do we really want to emulate
+shell scripts in a recipe and end up with hundreds of random resources on our node?
+Why do I even care about resources on my node?
+
+Before I answer those questions lets get back to our goal, which was?
+
+Goal: A unique instance of a daemon with our supplied configuration.
 
 ## Usage
 
+```
+# In this hypothetical instance we have a 'pie' daemon named 'pumpkin' that stores
+# pies recieved on port 314. We may want to run another instance called 'pecan' on
+# a different port that receives different types of pies.
+# htce::default.rb
+pie_instance 'pumpkin' do
+  # File owner and group.
+  # Daemon user and group.
+  user  'pumpkin'
+  group 'pies'
+  # creates `/opt/pies/pumpkins` then stores all config and runtime data.
+  root_path  '/opt/pies'
+  service_options({
+    port: 314,
+    store_pies: true,
+    daemon_args: %w(-Tsteaming -Sdelicious)
+  })
+end
+```
+
 ## How it works
 
-Provids Resource Provider superclasses for building instances of software.
+Provides resource provider super classes for building instances of software.
+
+```
+# We create a resource that subclasses this instance super-class
+Chef::Resource::Daemon::Instance < Chef::Resource::Instance
+```
+
+Ignores system defaults (configuration, initscripts, etc).
+
 
 ## Code Style
 
