@@ -1,6 +1,7 @@
 require 'chef/resource'
 
 module ChefInstance
+  # Docs
   class Instance < Chef::Resource
     def initialize(new_resource, run_context = nil)
       super
