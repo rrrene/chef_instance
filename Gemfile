@@ -1,9 +1,12 @@
-# A sample Gemfile
 source 'https://rubygems.org'
 
 gem 'rake'
 
-group :integration do
-  gem 'test-kitchen', :group => :integration
-  gem 'kitchen-vagrant', :group => :integration
+group :documentation do
+  gem 'yard', :group => :documentation
+end
+
+group :test do
+  gem 'minitest'
+  gem 'rubocop'
 end
