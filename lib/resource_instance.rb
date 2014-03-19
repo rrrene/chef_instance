@@ -6,7 +6,7 @@ module ChefInstance
     class Instance < Chef::Resource
       def initialize(new_resource, run_context = nil)
         super
-        @provider = Chef::Provider::Instance
+        @provider = ChefInstance::Provider::Instance
         @action = :create
         @allowed_actions = [:create, :destroy, :enable, :disable, :nothing]
       end
