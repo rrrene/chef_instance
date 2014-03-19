@@ -3,6 +3,8 @@
 # http://docs.seattlerb.org/minitest/Minitest/Expectations.html
 
 require_relative 'spec_helper'
+require 'resource_instance'
+require 'provider_instance'
 
 describe 'ResourceInstance', 'Tests for ChefInstance::Resource::Instance' do
   let(:node) do
