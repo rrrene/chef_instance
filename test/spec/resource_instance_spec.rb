@@ -25,20 +25,21 @@ describe 'ResourceInstance', 'Tests for ChefInstance::Resource::Instance' do
 
   describe 'Parameter tests for Chef::Resource::Instance' do
     it "has a 'install_type' parameter that can be set" do
-      @test_instance.must_respond_to :install_type
-      @test_instance.install_type(:existing)
-      @test_instance.install_type.must_be :existing
+      @test_instance.must_respond_to(:install_type)
+      @test_instance.install_type(:package)
+      @test_instance.install_type.must_equal(:package)
     end
 
-    it "has a 'plugin_config' parameter that can be set" do
+    it "has a 'install_options' parameter that can be set" do
       test_config = {
-        'format' => 'plain',
-        'path' => %w(/var/log/httpd/*_log),
-        'type' => 'httpd'
+        format: 'plain',
+        path: %w(/var/log/httpd/*_log),
+        type: 'httpd'
       }
 
-      @test_instance.plugin_config(test_config)
-      assert(@test_instance.plugin_config, 'input')
+      @test_instance.must_respond_to :install_options
+      @test_instance.install_options(test_config)
+      @test_instance.install_options.must_equal(test_config)
     end
   end
 end
