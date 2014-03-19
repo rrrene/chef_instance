@@ -2,3 +2,5 @@
 .gems
 .yardoc
 *.lock
+.idea
+coverage
