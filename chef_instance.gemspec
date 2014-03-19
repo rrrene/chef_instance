@@ -6,6 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = ChefInstance::VERSION
   spec.authors       = ['Miah Johnson']
   spec.email         = %w(miah@chia-pet.org)
+  spec.cert_chain    = ['certs/miah_at_chia-pet_dot_org.pem']
+  spec.signing_key   = File.expand_path('~/.gem/gem-private_key.pem')
   spec.description   = 'Chef Resource & Provider for building software' \
                        'instances.'
   spec.summary       = 'Chef Resource & Provider Super Classes for' \
