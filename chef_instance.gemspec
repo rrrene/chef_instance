@@ -6,8 +6,10 @@ Gem::Specification.new do |spec|
   spec.version       = ChefInstance::VERSION
   spec.authors       = ['Miah Johnson']
   spec.email         = %w(miah@chia-pet.org)
-  spec.description   = %q(TODO: Write a gem description)
-  spec.summary       = %q(Provides Chef Resource Provider Super Class for building instances of software.)
+  spec.description   = 'Chef Resource & Provider for building software' \
+                       'instances.'
+  spec.summary       = 'Chef Resource & Provider Super Classes for' \
+                       'building stand-alone instances of software.'
   spec.homepage      = 'https://github.com/viscera/chef_instance'
   spec.license       = 'Apache-2.0'
 
@@ -17,6 +19,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w(lib)
 
   spec.add_development_dependency 'bundler', '~> 1.3'
+  spec.add_development_dependency 'chef', '>= 11.10.4'
+  spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'chef', '11.10.4'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'yard'
 end
