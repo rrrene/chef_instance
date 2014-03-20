@@ -51,15 +51,13 @@ This code follows the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-g
 
 The code style is checked by [Rubocop](http://batsov.com/rubocop/) and can be checked by executing `rake test:rubocop` or `rubocop`.
 
+[![Build Status](https://travis-ci.org/miah/chef_instance.png?branch=master)](https://travis-ci.org/miah/chef_instance)
+[![Code Climate](https://codeclimate.com/github/miah/chef_instance.png)](https://codeclimate.com/github/miah/chef_instance)
+[![Coverage Status](https://coveralls.io/repos/miah/chef_instance/badge.png)](https://coveralls.io/r/miah/chef_instance)
+
 # Author
 
 Author:: Miah Johnson (<miah@chia-pet.org>)
-
-# Donations
-
-[![Gittip](https://www.gittip.com/assets/9.4.5/logo.png)](https://www.gittip.com/miah/)
-
-[![Bitcoin](http://bitcoinprices.com/images/bitcoin.png)](bitcoin:1DT5XQrtAk1M9V5RodvEHddfe7Nqd1kMjN)
 
 # License
 
