@@ -23,7 +23,16 @@ describe 'ResourceInstance', 'Tests for ChefInstance::Resource::Instance' do
         instance_name, run_context)
   end
 
-  describe 'Parameter tests for Chef::Resource::Instance' do
+  describe 'Class type checks for ChefInstance::Resource::Instance' do
+    it 'Is a ChefInstance::Resource::Instance' do
+      @test_instance.must_be_kind_of(Chef::Resource)
+    end
+    it 'Subclasses Chef::Resource' do
+      @test_instance.must_be_instance_of(ChefInstance::Resource::Instance)
+    end
+  end
+
+  describe 'Parameter tests for ChefInstance::Resource::Instance' do
     it "has a 'install_type' parameter that can be set" do
       @test_instance.must_respond_to(:install_type)
       @test_instance.install_type(:package)
