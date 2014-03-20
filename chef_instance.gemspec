@@ -1,5 +1,5 @@
 # coding: utf-8
-require_relative 'lib/version'
+require_relative 'lib/chef_instance/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'chef_instance'
