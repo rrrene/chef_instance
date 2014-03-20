@@ -6,4 +6,4 @@ rvm:
   - 2.1.0
   - rbx-2.2.6
 gemfile: Gemfile
-script: bundle exec rake test:quick
+script: bundle exec rake test:minitest
