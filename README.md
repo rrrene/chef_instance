@@ -38,8 +38,12 @@ end
 Provides resource provider super classes for building instances of software.
 
 ```
-# We create a resource that subclasses this instance super-class
-Chef::Resource::Daemon::Instance < Chef::Resource::Instance
+class Chef
+  class Resource
+    class Daemon < Chef::Resource::Instance
+    end
+  end
+end
 ```
 
 Ignores system defaults (configuration, initscripts, etc).
