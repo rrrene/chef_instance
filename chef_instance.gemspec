@@ -6,15 +6,12 @@ Gem::Specification.new do |spec|
   spec.version       = ChefInstance::VERSION
   spec.authors       = ['Miah Johnson']
   spec.email         = %w(miah@chia-pet.org)
-  spec.cert_chain    = ['certs/miah_at_chia-pet_dot_org.pem']
-  spec.signing_key   = File.expand_path('~/.gem/gem-private_key.pem')
   spec.description   = 'Chef Resource & Provider for building software' \
                        'instances.'
   spec.summary       = 'Chef Resource & Provider Super Classes for' \
                        'building stand-alone instances of software.'
   spec.homepage      = 'https://github.com/viscera/chef_instance'
   spec.license       = 'Apache-2.0'
-
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r(^bin/)) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r(^(test|spec|features)/))
