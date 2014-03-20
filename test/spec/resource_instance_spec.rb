@@ -46,7 +46,7 @@ describe 'ResourceInstance', 'Tests for ChefInstance::Resource::Instance' do
         type: 'httpd'
       }
 
-      @test_instance.must_respond_to :install_options
+      @test_instance.must_respond_to(:install_options)
       @test_instance.install_options(test_config)
       @test_instance.install_options.must_equal(test_config)
     end
