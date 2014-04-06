@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'chef', '>= 11.10.4'
   spec.add_development_dependency 'coveralls', '~> 0.7.0'
+  spec.add_development_dependency 'inch', '~> 0.4.0'
   spec.add_development_dependency 'minitest', '~> 5.3.1'
   spec.add_development_dependency 'rake', '~> 10.1.1'
   spec.add_development_dependency 'rubocop', '~> 0.19.1'
