@@ -1,4 +1,4 @@
-# chef_instance
+# chef_instance [![Inline docs](http://inch-pages.github.io/github/miah/chef_instance.png)](http://inch-pages.github.io/github/miah/chef_instance)
 
 ## Why
 
